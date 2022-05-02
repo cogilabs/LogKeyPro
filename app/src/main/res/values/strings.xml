@@ -3,4 +3,12 @@
     <string name="log">LOG\'</string>
     <string name="logo">logo</string>
     <string name="key">KEY</string>
+    <string name="key_pro">KEY Pro</string>
+    <string name="todo">TODO</string>
+    <string name="arriv_es_du_jour">Arrivées du jour</string>
+    <string name="d_parts_du_jour">Départs du jour</string>
+    <string name="recherche_client">Recherche client</string>
+    <string name="chambres">Chambres</string>
+    <string name="commandes">Commandes</string>
+    <string name="bienvenue">Bienvenue !</string>
 </resources>

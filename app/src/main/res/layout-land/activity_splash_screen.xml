@@ -19,36 +19,34 @@
         app:layout_constraintVertical_bias="0.323"
         app:srcCompat="@drawable/log__key_logo" />
 
-    <TextView
-        android:id="@+id/textLOG"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/mada"
-        android:text="@string/log"
-        android:textColor="@color/logo1"
-        android:textSize="64sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="-40dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoSplash"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/logoSplash">
 
-    <TextView
-        android:id="@+id/textKEY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/mada"
-        android:text="@string/key"
-        android:textColor="@color/logo2"
-        android:textSize="64sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
-        app:layout_constraintStart_toEndOf="@+id/textLOG"
-        app:layout_constraintTop_toBottomOf="@+id/logoSplash"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textLOG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mada"
+            android:text="@string/log"
+            android:textColor="@color/logo1"
+            android:textSize="64sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textKEY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mada"
+            android:text="@string/key"
+            android:textColor="@color/logo2"
+            android:textSize="64sp" />
+    </LinearLayout>
 
     <!-- LOG’ KEY -->
 </androidx.constraintlayout.widget.ConstraintLayout>

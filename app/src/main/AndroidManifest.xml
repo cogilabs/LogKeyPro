@@ -7,28 +7,43 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.LogKeyPro"
         android:screenOrientation="landscape"
-        >
-
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LogKeyPro">
+        <activity
+            android:name=".Accueil.RechercheClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Accueil.CommandesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Accueil.ChambresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Accueil.DepartsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Accueil.ArriveesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Accueil.AccueilActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
     </application>
-
 
 </manifest>
