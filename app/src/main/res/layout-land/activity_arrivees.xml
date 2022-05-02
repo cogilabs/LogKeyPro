@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Accueil.ArriveesActivity">
 
+
     <ImageView
         android:id="@+id/imageRectangle"
         android:layout_width="0dp"
@@ -14,7 +15,7 @@
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -22,53 +23,55 @@
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="288dp"
+        android:layout_width="0dp"
         android:layout_height="164dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/log__key_logo"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/log__key_logo" />
 
-    <TextView
-        android:id="@+id/textLog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:fontFamily="@font/mada"
-        android:text="@string/log"
-        android:textColor="#D1B78F"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
-        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
-        tools:ignore="TextContrastCheck" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="290dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="-10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
 
-    <TextView
-        android:id="@+id/textKeyPro"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:fontFamily="@font/mada"
-        android:text="@string/key_pro"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textLog"
-        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textLog"
-        app:layout_constraintTop_toTopOf="@+id/textLog"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:fontFamily="@font/mada"
+            android:text="@string/log"
+            android:textColor="#D1B78F"
+            android:textSize="34sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textKeyPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mada"
+            android:text="@string/key_pro"
+            android:textSize="34sp" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/rectangleArrivees"
         android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginTop="28dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageRectangle"
-        app:layout_constraintTop_toBottomOf="@+id/textLog"
-        app:srcCompat="@drawable/rectangle2"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/rectangle2" />
 
     <TextView
         android:id="@+id/textArrivees"
@@ -110,8 +113,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleDeparts"
         app:layout_constraintEnd_toEndOf="@+id/rectangleDeparts"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rectangleDeparts"
         app:layout_constraintTop_toTopOf="@+id/rectangleDeparts"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
 
     <ImageView
@@ -122,7 +127,7 @@
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangleDeparts"
         app:srcCompat="@drawable/rectangle2" />
 
@@ -138,8 +143,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleChambres"
         app:layout_constraintEnd_toEndOf="@+id/rectangleChambres"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/rectangleChambres"
         app:layout_constraintTop_toTopOf="@+id/rectangleChambres"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
 
     <ImageView
@@ -149,8 +156,8 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangleChambres"
         app:srcCompat="@drawable/rectangle2" />
 
@@ -169,6 +176,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rectangleCommandes"
         app:layout_constraintTop_toTopOf="@+id/rectangleCommandes"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="RtlCompat" />
 
     <ImageView
@@ -177,9 +185,9 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleCommandes"
         app:layout_constraintTop_toBottomOf="@+id/rectangleCommandes"
         app:srcCompat="@drawable/rectangle2" />
 
@@ -195,8 +203,152 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleRechercheClient"
         app:layout_constraintEnd_toEndOf="@+id/rectangleRechercheClient"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rectangleRechercheClient"
         app:layout_constraintTop_toTopOf="@+id/rectangleRechercheClient"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/textNom"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_bold"
+                android:text="@string/nom"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textPrenom"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_bold"
+                android:text="@string/pr_nom"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textNumChambre"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_bold"
+                android:text="@string/n_de_chambre"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textCheckIn"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_bold"
+                android:text="@string/check_in"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/textNom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/turcotti"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPrenom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/claire"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textNumChambre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/_544"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/textNom2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/chaze"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPrenom2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/marie"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textNumChambre2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/_522"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+        </TableRow>
+
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

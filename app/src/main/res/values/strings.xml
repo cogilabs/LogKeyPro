@@ -11,4 +11,27 @@
     <string name="chambres">Chambres</string>
     <string name="commandes">Commandes</string>
     <string name="bienvenue">Bienvenue !</string>
+    <string name="nom">Nom</string>
+    <string name="check_in">Check-In</string>
+    <string name="n_de_chambre">N° de chambre</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="claire">Claire</string>
+    <string name="_544">544</string>
+    <string name="chaze">Chaze</string>
+    <string name="_522">522</string>
+    <string name="marie">Marie</string>
+    <string name="turcotti">Turcotti</string>
+    <string name="entrez_le_num_ro_de_la_chambre">Entrez le numéro de la chambre :</string>
+    <string name="aller_vers_la_chambre">Aller vers la chambre</string>
+    <string name="check_out_venir">Check-out à venir :</string>
+    <string name="chambre_231">Chambre 231</string>
+    <string name="date">../../....</string>
+    <string name="dateCheckOut">..:..</string>
+    <string name="mme_preynat_elisa">Mme Preynat Elisa</string>
+    <string name="datecheckout">../../....</string>
+    <string name="heurecheckout">..:..</string>
+    <string name="chambre_209">Chambre 209</string>
+    <string name="m_girou_david">M Girou David</string>
+    <string name="square">Square</string>
+    <string name="envoyer_une_notification_de_rappel_de_check_out">Envoyer une notification de rappel de Check-Out</string>
 </resources>

@@ -3,6 +3,7 @@ package fr.logkey.logkeypro.Accueil
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import fr.logkey.logkeypro.R
 
@@ -11,6 +12,7 @@ class ArriveesActivity : AppCompatActivity() {
     lateinit var clickChambres : TextView
     lateinit var clickCommandes : TextView
     lateinit var clickRechercheClient : TextView
+    lateinit var clickAccueil : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,13 @@ class ArriveesActivity : AppCompatActivity() {
         clickRechercheClient.setOnClickListener {
             startActivity(rechercheIntent)
         }
+
+        clickAccueil = findViewById(R.id.imageLogo)
+        val accueilIntent = Intent(this,AccueilActivity::class.java)
+       clickAccueil.setOnClickListener {
+            startActivity(accueilIntent)
+        }
+
 
     }
 }
