@@ -1,14 +1,15 @@
-package fr.logkey.logkeypro.Accueil
+package fr.logkey.logkeypro.Commandes
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import fr.logkey.logkeypro.Commandes.DetailsCommandeActivity
+import fr.logkey.logkeypro.Accueil.*
 import fr.logkey.logkeypro.R
+import fr.logkey.logkeypro.Accueil.RechercheClientActivity
 
-class CommandesActivity : AppCompatActivity() {
+class PriseEnChargeCommandeActivity : AppCompatActivity() {
 
     lateinit var clickArriveesDuJour : TextView
     lateinit var clickDepartsDuJour : TextView
@@ -16,11 +17,11 @@ class CommandesActivity : AppCompatActivity() {
     lateinit var clickRechercheClient : TextView
     lateinit var clickAccueil : ImageView
     lateinit var clickDetail : TextView
-
+    lateinit var clickCommandes : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_commandes)
+        setContentView(R.layout.activity_prise_en_charge_commande)
 
         clickArriveesDuJour = findViewById(R.id.textArrivees)
         val arriveesIntent = Intent(this, ArriveesActivity::class.java)
@@ -47,17 +48,16 @@ class CommandesActivity : AppCompatActivity() {
         }
 
         clickAccueil = findViewById(R.id.imageLogo)
-        val accueilIntent = Intent(this,AccueilActivity::class.java)
+        val accueilIntent = Intent(this, AccueilActivity::class.java)
         clickAccueil.setOnClickListener {
             startActivity(accueilIntent)
         }
 
-        clickDetail = findViewById(R.id.textVoirDetailsCommande1)
-        val detailIntent = Intent(this,DetailsCommandeActivity::class.java)
-        clickDetail.setOnClickListener {
-            startActivity(detailIntent)
+
+        clickCommandes = findViewById(R.id.textCommandes)
+        val commandesIntent = Intent(this, CommandesActivity::class.java)
+        clickCommandes.setOnClickListener {
+            startActivity(commandesIntent)
         }
-
-
     }
 }

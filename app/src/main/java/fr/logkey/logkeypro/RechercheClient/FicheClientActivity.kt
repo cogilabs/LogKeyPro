@@ -1,26 +1,26 @@
-package fr.logkey.logkeypro.Accueil
+package fr.logkey.logkeypro.RechercheClient
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import fr.logkey.logkeypro.Commandes.DetailsCommandeActivity
+import fr.logkey.logkeypro.Accueil.*
 import fr.logkey.logkeypro.R
 
-class CommandesActivity : AppCompatActivity() {
+class FicheClientActivity : AppCompatActivity() {
 
     lateinit var clickArriveesDuJour : TextView
     lateinit var clickDepartsDuJour : TextView
     lateinit var clickChambres : TextView
-    lateinit var clickRechercheClient : TextView
+    lateinit var clickCommandes : TextView
     lateinit var clickAccueil : ImageView
-    lateinit var clickDetail : TextView
-
+    lateinit var clickRechercheClient : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_commandes)
+        setContentView(R.layout.activity_fiche_client)
 
         clickArriveesDuJour = findViewById(R.id.textArrivees)
         val arriveesIntent = Intent(this, ArriveesActivity::class.java)
@@ -35,9 +35,21 @@ class CommandesActivity : AppCompatActivity() {
         }
 
         clickChambres = findViewById(R.id.textChambres)
-        val chambresIntent  = Intent(this, ChambresActivity::class.java)
+        val chambresIntent = Intent(this, ChambresActivity::class.java)
         clickChambres.setOnClickListener {
             startActivity(chambresIntent)
+        }
+
+        clickCommandes = findViewById(R.id.textCommandes)
+        val commandesIntent = Intent(this, CommandesActivity::class.java)
+        clickCommandes.setOnClickListener {
+            startActivity(commandesIntent)
+        }
+
+        clickAccueil = findViewById(R.id.imageLogo)
+        val accueilIntent = Intent(this, AccueilActivity::class.java)
+        clickAccueil.setOnClickListener {
+            startActivity(accueilIntent)
         }
 
         clickRechercheClient = findViewById(R.id.textRechercheClient)
@@ -45,19 +57,5 @@ class CommandesActivity : AppCompatActivity() {
         clickRechercheClient.setOnClickListener {
             startActivity(rechercheIntent)
         }
-
-        clickAccueil = findViewById(R.id.imageLogo)
-        val accueilIntent = Intent(this,AccueilActivity::class.java)
-        clickAccueil.setOnClickListener {
-            startActivity(accueilIntent)
-        }
-
-        clickDetail = findViewById(R.id.textVoirDetailsCommande1)
-        val detailIntent = Intent(this,DetailsCommandeActivity::class.java)
-        clickDetail.setOnClickListener {
-            startActivity(detailIntent)
-        }
-
-
     }
 }

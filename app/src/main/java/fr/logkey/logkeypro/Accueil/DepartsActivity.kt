@@ -39,7 +39,7 @@ class DepartsActivity : AppCompatActivity() {
         }
 
         clickRechercheClient = findViewById(R.id.textRechercheClient)
-        val rechercheIntent = Intent(this,RechercheClientActivity::class.java)
+        val rechercheIntent = Intent(this, RechercheClientActivity::class.java)
         clickRechercheClient.setOnClickListener {
             startActivity(rechercheIntent)
         }

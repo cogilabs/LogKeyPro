@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chambre.AllerVersChambreActivity">
-
+    tools:context=".RechercheClient.FicheClientActivity">
 
     <ImageView
         android:id="@+id/imageRectangle"
@@ -135,11 +134,11 @@
         android:id="@+id/textChambres"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_bold"
+        android:fontFamily="@font/mada_semibold"
         android:gravity="center_vertical"
         android:text="@string/chambres"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#585858"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleChambres"
         app:layout_constraintEnd_toEndOf="@+id/rectangleChambres"
@@ -195,11 +194,11 @@
         android:id="@+id/textRechercheClient"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_semibold"
+        android:fontFamily="@font/mada_bold"
         android:gravity="center_vertical"
         android:text="@string/recherche_client"
         android:textAlignment="center"
-        android:textColor="#585858"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleRechercheClient"
         app:layout_constraintEnd_toEndOf="@+id/rectangleRechercheClient"
@@ -210,10 +209,10 @@
         tools:ignore="RtlCompat" />
 
     <ImageView
-        android:id="@+id/rectangleChambre"
+        android:id="@+id/rectangleClient"
         android:layout_width="989dp"
         android:layout_height="61dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/rectchambres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageLogo"
@@ -225,13 +224,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/mada_bold"
-        android:text="@string/chambre_212z"
+        android:text="@string/fiche_client"
         android:textColor="#585858"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangleChambre"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleClient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/rectangleChambre"
-        app:layout_constraintTop_toTopOf="@+id/rectangleChambre" />
+        app:layout_constraintStart_toStartOf="@+id/rectangleClient"
+        app:layout_constraintTop_toTopOf="@+id/rectangleClient" />
+
 
     <View
         android:id="@+id/divider2"
@@ -240,39 +240,40 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toEndOf="@+id/imageRectangle"
-        app:layout_constraintTop_toBottomOf="@+id/rectangleChambre" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient" />
 
     <View
         android:id="@+id/divider3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="412dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toStartOf="@+id/divider2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageRectangle"
-        app:layout_constraintTop_toBottomOf="@+id/rectangleChambre" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient" />
 
     <View
         android:id="@+id/divider4"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="252dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/divider2"
-        app:layout_constraintTop_toBottomOf="@+id/rectangleChambre" />
+        app:layout_constraintTop_toTopOf="@+id/textDernieresReservation" />
 
     <View
         android:id="@+id/divider5"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="224dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/divider2"
         app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
@@ -283,14 +284,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/mada_semibold"
-        android:text="@string/informations_client"
+        android:text="@string/informations_personelles"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/divider4"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageLogo"
-        app:layout_constraintTop_toBottomOf="@+id/rectangleChambre" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient" />
 
     <TextView
         android:id="@+id/textNom"
@@ -384,35 +385,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textNumId" />
 
     <TextView
-        android:id="@+id/textArrivee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/mada_semibold"
-        android:lineSpacingExtra="20sp"
-        android:text="@string/arriv_e"
-        android:textColor="#585858"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textDateNaissance"
-        app:layout_constraintTop_toBottomOf="@+id/textDateNaissance" />
-
-    <TextView
-        android:id="@+id/textDepart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/mada_semibold"
-        android:text="@string/d_part"
-        android:textColor="#585858"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textArrivee"
-        app:layout_constraintTop_toBottomOf="@+id/textArrivee" />
-
-    <TextView
         android:id="@+id/textFacturation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/mada_semibold"
         android:text="@string/facturation"
         android:textColor="#000000"
@@ -421,16 +398,16 @@
         app:layout_constraintStart_toEndOf="@+id/imageRectangle"
         app:layout_constraintTop_toBottomOf="@+id/divider3" />
 
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/divider3"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageRectangle"
         app:layout_constraintTop_toBottomOf="@+id/textFacturation"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -525,20 +502,22 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textInfoPerso"
-        app:layout_constraintTop_toBottomOf="@+id/rectangleChambre" />
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewDerniersPassages"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/divider4"
         app:layout_constraintEnd_toEndOf="@+id/divider4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/divider4"
         app:layout_constraintTop_toBottomOf="@+id/textDernieresReservation"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textDernieresCommandes"
@@ -547,65 +526,115 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/mada_semibold"
-        android:text="@string/disponibilit_de_la_chambre"
+        android:text="@string/derni_res_commandes"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textFacturation"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/divider5"
         app:layout_constraintTop_toBottomOf="@+id/divider4" />
-
-    <TextView
-        android:id="@+id/textPlageHorraire"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/mada_semibold"
-        android:textColor="#585858"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textFacturation"
-        app:layout_constraintTop_toBottomOf="@+id/textDernieresCommandes"
-        tools:text="Mettre les plages horaires envoyées par le client" />
-
-    <Button
-        android:id="@+id/buttonEnvoieNotifPassage"
-        android:layout_width="450dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/mada_medium"
-        android:text="@string/envoyer_une_notification_de_passage_du_personnel"
-        android:textSize="14sp"
-        app:cornerRadius="90dp"
-        app:layout_constraintEnd_toEndOf="@+id/textPlageHorraire"
-        app:layout_constraintHorizontal_bias="0.324"
-        app:layout_constraintStart_toStartOf="@+id/textPlageHorraire"
-        app:layout_constraintTop_toBottomOf="@+id/textPlageHorraire"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/textCommandesTitre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/mada_semibold"
-        android:text="@string/commande9"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/divider3"
-        app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCommandes"
-        android:layout_width="492dp"
-        android:layout_height="279dp"
+        android:layout_width="484dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/divider3"
-        app:layout_constraintTop_toBottomOf="@+id/textCommandesTitre" />
+        app:layout_constraintTop_toBottomOf="@+id/textDernieresCommandes" />
+
+    <TextView
+        android:id="@+id/textActionRapides"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/actions_rapides"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/divider5"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCommandes" />
+
+    <Button
+        android:id="@+id/buttonEnvoyerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/envoyer_un_e_mail"
+        app:cornerRadius="90dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/scrollView3"
+        app:layout_constraintTop_toBottomOf="@+id/textActionRapides"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonImpFacture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/imprimer_la_derni_re_facture"
+        app:cornerRadius="90dip"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEnvoyerEmail"
+        app:layout_constraintStart_toStartOf="@+id/buttonEnvoyerEmail"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnvoyerEmail"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textContacts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/contacts"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/textDateNaissance" />
+
+    <TextView
+        android:id="@+id/textNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/num_ro_de_tel"
+        android:textColor="#585858"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textDateNaissance"
+        app:layout_constraintTop_toBottomOf="@+id/textContacts" />
+
+    <TextView
+        android:id="@+id/textMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/adresse_mail"
+        android:textColor="#585858"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textNum"
+        app:layout_constraintTop_toBottomOf="@+id/textNum" />
+
+    <TextView
+        android:id="@+id/textAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/adresse"
+        android:textColor="#585858"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textMail"
+        app:layout_constraintTop_toBottomOf="@+id/textMail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

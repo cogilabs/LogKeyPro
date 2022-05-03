@@ -227,7 +227,7 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/textNom"
+                android:id="@+id/textChambreCommandes"
                 android:layout_width="247dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
@@ -237,7 +237,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textPrenom"
+                android:id="@+id/textDetailCommande"
                 android:layout_width="247dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
@@ -247,7 +247,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textNumChambre"
+                android:id="@+id/textHeureCommande"
                 android:layout_width="247dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
@@ -275,7 +275,7 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/textNom1"
+                android:id="@+id/textChambre1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -284,7 +284,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textPrenom1"
+                android:id="@+id/textVoirDetailsCommande1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -293,7 +293,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textNumChambre1"
+                android:id="@+id/textHeureCommande1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -302,7 +302,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/checkBoxPriseEnCharge1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />
@@ -316,7 +316,7 @@
             android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/textNom2"
+                android:id="@+id/textChambre2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -325,7 +325,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textPrenom2"
+                android:id="@+id/textVoirDetailsCommande2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -334,7 +334,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textNumChambre2"
+                android:id="@+id/textHeureCommande2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -343,7 +343,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkBoxPriseEnCharge2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />

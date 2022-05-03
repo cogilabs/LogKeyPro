@@ -14,6 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogKeyPro">
         <activity
+            android:name=".RechercheClient.ResultatRechercheClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RechercheClient.FicheClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Commandes.PriseEnChargeCommandeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Commandes.DetailsCommandeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Chambre.ChambresDisponiblesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.login.EmailPasswordActivity"
             android:exported="false" />
         <activity

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Accueil.CommandesActivity">
-
-
+    tools:context=".Chambre.ChambresDisponiblesActivity">
 
     <ImageView
         android:id="@+id/imageRectangle"
@@ -136,11 +134,11 @@
         android:id="@+id/textChambres"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_semibold"
+        android:fontFamily="@font/mada_bold"
         android:gravity="center_vertical"
         android:text="@string/chambres"
         android:textAlignment="center"
-        android:textColor="#585858"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleChambres"
         app:layout_constraintEnd_toEndOf="@+id/rectangleChambres"
@@ -166,11 +164,11 @@
         android:id="@+id/textCommandes"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_bold"
+        android:fontFamily="@font/mada_semibold"
         android:gravity="center_vertical"
         android:text="@string/commandes"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#585858"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleCommandes"
         app:layout_constraintEnd_toEndOf="@+id/rectangleCommandes"
@@ -210,177 +208,103 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
 
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/rectangleClient"
+        android:layout_width="989dp"
+        android:layout_height="61dp"
+        android:contentDescription="@string/rectchambres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:srcCompat="@drawable/rectangle2" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp">
+    <TextView
+        android:id="@+id/textFicheClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mada_bold"
+        android:text="@string/chambres_disponibles"
+        android:textColor="#585858"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleClient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rectangleClient"
+        app:layout_constraintTop_toTopOf="@+id/rectangleClient" />
 
-            <TextView
-                android:id="@+id/textChambreCommandes"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/chambre"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/rectanglePretes"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rectpretes"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient"
+        app:srcCompat="@drawable/rectangle" />
 
-            <TextView
-                android:id="@+id/textDetailCommande"
-                android:layout_width="247dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/d_tail_commande"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/rectangleAnettoyer"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/rectanettoyer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/rectanglePretes"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient"
+        app:srcCompat="@drawable/rectangle" />
 
-            <TextView
-                android:id="@+id/textHeureCommande"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/heure"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleClient" />
 
-            <TextView
-                android:id="@+id/textPrixCommande"
-                android:layout_width="147dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/prix1"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textPretes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mada_bold"
+        android:text="@string/pr_tes"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectanglePretes"
+        app:layout_constraintEnd_toEndOf="@+id/rectanglePretes"
+        app:layout_constraintStart_toStartOf="@+id/rectanglePretes"
+        app:layout_constraintTop_toTopOf="@+id/rectanglePretes" />
 
-            <TextView
-                android:id="@+id/textCheckIn"
-                android:layout_width="186dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/prise_en_charge"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-        </TableRow>
+    <TextView
+        android:id="@+id/textANettoyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mada_bold"
+        android:text="@string/a_nettoyer"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleAnettoyer"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleAnettoyer"
+        app:layout_constraintStart_toEndOf="@+id/rectanglePretes"
+        app:layout_constraintTop_toTopOf="@+id/rectangleAnettoyer" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChambresPretes"
+        android:layout_width="493dp"
+        android:layout_height="667dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/rectanglePretes" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:id="@+id/textChambre1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/_540"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVoirDetailsCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
-                android:textAlignment="center"
-                android:textColor="#246ABD"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                tools:ignore="DuplicateSpeakableTextCheck" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:id="@+id/textChambre2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/_214"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVoirDetails2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
-                android:textAlignment="center"
-                android:textColor="#246ABD"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
-        </TableRow>
-
-    </TableLayout>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChambreANettoyer"
+        android:layout_width="492dp"
+        android:layout_height="667dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleAnettoyer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

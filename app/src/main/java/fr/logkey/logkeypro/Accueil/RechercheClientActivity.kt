@@ -3,9 +3,11 @@ package fr.logkey.logkeypro.Accueil
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import fr.logkey.logkeypro.R
+import fr.logkey.logkeypro.RechercheClient.ResultatRechercheClientActivity
 
 class RechercheClientActivity : AppCompatActivity() {
 
@@ -14,7 +16,8 @@ class RechercheClientActivity : AppCompatActivity() {
     lateinit var clickChambres : TextView
     lateinit var clickCommandes : TextView
     lateinit var clickAccueil : ImageView
-
+    lateinit var clickRecherche : Button
+    lateinit var clickRechercheClient : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,9 +49,21 @@ class RechercheClientActivity : AppCompatActivity() {
         }
 
         clickAccueil = findViewById(R.id.imageLogo)
-        val accueilIntent = Intent(this,AccueilActivity::class.java)
+        val accueilIntent = Intent(this, AccueilActivity::class.java)
         clickAccueil.setOnClickListener {
             startActivity(accueilIntent)
+        }
+        clickRechercheClient = findViewById(R.id.textRechercheClient)
+        val rechercheIntent = Intent(this, RechercheClientActivity::class.java)
+        clickRechercheClient.setOnClickListener {
+            startActivity(rechercheIntent)
+        }
+
+
+        clickRecherche = findViewById(R.id.buttonRechercherClient)
+        val rechercheClientIntent = Intent(this, ResultatRechercheClientActivity::class.java)
+        clickRecherche.setOnClickListener {
+            startActivity(rechercheClientIntent)
         }
     }
 }

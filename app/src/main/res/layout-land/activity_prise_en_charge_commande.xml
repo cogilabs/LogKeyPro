@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Accueil.CommandesActivity">
-
-
-
+    tools:context=".Commandes.PriseEnChargeCommandeActivity">
     <ImageView
         android:id="@+id/imageRectangle"
         android:layout_width="0dp"
@@ -210,177 +207,83 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
 
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/rectangleCommande"
+        android:layout_width="989dp"
+        android:layout_height="61dp"
+        android:contentDescription="@string/rectchambres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:srcCompat="@drawable/rectangle2" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp">
+    <TextView
+        android:id="@+id/textFicheClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mada_bold"
+        android:text="@string/d_tails_commandes_chambre_212"
+        android:textColor="#585858"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleCommande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rectangleCommande"
+        app:layout_constraintTop_toTopOf="@+id/rectangleCommande" />
 
-            <TextView
-                android:id="@+id/textChambreCommandes"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/chambre"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <Button
+        android:id="@+id/buttonPriseEnChargeCommande"
+        android:layout_width="427dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/mada_medium"
+        android:text="@string/prise_en_charge_de_la_commande"
+        android:textSize="20sp"
+        app:cornerRadius="90dp"
+        app:layout_constraintEnd_toStartOf="@+id/textFicheClient"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleCommande"
+        tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/textDetailCommande"
-                android:layout_width="247dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/d_tail_commande"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <CheckBox
+        android:id="@+id/checkBoxCommandeDeposee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/mada_medium"
+        android:text="@string/commande_d_pos_e"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toEndOf="@+id/buttonPriseEnChargeCommande"
+        app:layout_constraintTop_toBottomOf="@+id/textFicheClient" />
 
-            <TextView
-                android:id="@+id/textHeureCommande"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/heure"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textPriseEnCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="276dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/prise_en_charge_par"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonPriseEnChargeCommande"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPriseEnChargeCommande" />
 
-            <TextView
-                android:id="@+id/textPrixCommande"
-                android:layout_width="147dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/prix1"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textCheckIn"
-                android:layout_width="186dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/prise_en_charge"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:id="@+id/textChambre1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/_540"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVoirDetailsCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
-                android:textAlignment="center"
-                android:textColor="#246ABD"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                tools:ignore="DuplicateSpeakableTextCheck" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:id="@+id/textChambre2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/_214"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVoirDetails2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
-                android:textAlignment="center"
-                android:textColor="#246ABD"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
-        </TableRow>
-
-    </TableLayout>
+    <TextView
+        android:id="@+id/textAgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/agent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPriseEnCharge"
+        app:layout_constraintStart_toEndOf="@+id/textPriseEnCharge"
+        app:layout_constraintTop_toTopOf="@+id/textPriseEnCharge" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

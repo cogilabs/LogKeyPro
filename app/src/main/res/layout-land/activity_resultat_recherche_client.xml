@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Accueil.CommandesActivity">
-
-
+    tools:context=".RechercheClient.ResultatRechercheClientActivity">
 
     <ImageView
         android:id="@+id/imageRectangle"
@@ -166,11 +164,11 @@
         android:id="@+id/textCommandes"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_bold"
+        android:fontFamily="@font/mada_semibold"
         android:gravity="center_vertical"
         android:text="@string/commandes"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#585858"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleCommandes"
         app:layout_constraintEnd_toEndOf="@+id/rectangleCommandes"
@@ -196,11 +194,11 @@
         android:id="@+id/textRechercheClient"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/mada_semibold"
+        android:fontFamily="@font/mada_bold"
         android:gravity="center_vertical"
         android:text="@string/recherche_client"
         android:textAlignment="center"
-        android:textColor="#585858"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangleRechercheClient"
         app:layout_constraintEnd_toEndOf="@+id/rectangleRechercheClient"
@@ -210,135 +208,153 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="387dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRectangle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/square"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="355dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:fontFamily="@font/mada_medium"
+        android:hint="@string/entrez_le_nom_du_client"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonRechercherClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/mada_medium"
+        android:text="@string/rechercher"
+        android:textSize="20sp"
+        app:cornerRadius="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textResultats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/mada_semibold"
+        android:text="@string/r_sultats"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRechercherClient"
+        app:layout_constraintStart_toStartOf="@+id/buttonRechercherClient"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRechercherClient" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="730dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/textResultats"
+        app:srcCompat="@drawable/square" />
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/rectangleCommandes"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_width="688dp"
+        android:layout_height="340dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.55">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textChambreCommandes"
-                android:layout_width="220dp"
+                android:id="@+id/textNomResultat"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
-                android:text="@string/chambre"
+                android:text="@string/nom"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textDetailCommande"
-                android:layout_width="247dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/textPrenomResultat"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/mada_bold"
-                android:text="@string/d_tail_commande"
+                android:text="@string/pr_nom"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textHeureCommande"
-                android:layout_width="190dp"
+                android:id="@+id/textNumChambreResultat"
+                android:layout_width="184dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
-                android:text="@string/heure"
+                android:text="@string/n_de_chambre"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textPrixCommande"
-                android:layout_width="147dp"
+                android:id="@+id/textAccesFicheClient"
+                android:layout_width="223dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_bold"
-                android:text="@string/prix1"
+                android:text="@string/acc_s_fiche_client"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textCheckIn"
-                android:layout_width="186dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_bold"
-                android:text="@string/prise_en_charge"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
-
-            <TextView
-                android:id="@+id/textChambre1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/_540"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textVoirDetailsCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
-                android:textAlignment="center"
-                android:textColor="#246ABD"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                tools:ignore="DuplicateSpeakableTextCheck" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textChambre2"
+                android:id="@+id/textNomResultat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/xxxxxx"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textPrenomResultat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mada_medium"
+                android:text="@string/xxxxxx"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textNumChambreResultat1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
@@ -347,38 +363,14 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textVoirDetails2"
+                android:id="@+id/textAccesFicheClient1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mada_medium"
-                android:text="@string/voir_les_d_tails"
+                android:text="@string/vers_la_fiche_client"
                 android:textAlignment="center"
                 android:textColor="#246ABD"
                 android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textHeureCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/heurecheckout"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textPrixCommande2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mada_medium"
-                android:text="@string/prix"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxPriseEnCharge2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
         </TableRow>
 
     </TableLayout>
