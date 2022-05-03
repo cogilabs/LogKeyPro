@@ -34,4 +34,12 @@
     <string name="m_girou_david">M Girou David</string>
     <string name="square">Square</string>
     <string name="envoyer_une_notification_de_rappel_de_check_out">Envoyer une notification de rappel de Check-Out</string>
+    <string name="aller_vers_les_chambres_disponibles">Aller vers les chambres disponibles</string>
+    <string name="connexion">Connexion</string>
+    <string name="bienvenue_sur_log">Bienvenue sur LOG\'</string>
+    <string name="connectez_vous_pour_acc_der_votre_espage">Connectez-vous pour accéder à votre espace</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="chambre_longue">CHAMBRE LONGUE</string>
+
 </resources>

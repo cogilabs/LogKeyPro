@@ -280,7 +280,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/buttonAllerVersChambre" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageLogo2"
                 android:layout_width="806dp"
                 android:layout_height="215dp"
                 android:layout_marginTop="24dp"
@@ -294,11 +294,11 @@
                 android:id="@+id/tableLayout3"
                 android:layout_width="766dp"
                 android:layout_height="182dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLogo2"
+                app:layout_constraintEnd_toEndOf="@+id/imageLogo2"
                 app:layout_constraintHorizontal_bias="0.475"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageLogo2"
+                app:layout_constraintTop_toTopOf="@+id/imageLogo2"
                 app:layout_constraintVertical_bias="0.484">
 
                 <TableRow
@@ -402,20 +402,20 @@
                 android:fontFamily="@font/mada_bold"
                 android:text="@string/envoyer_une_notification_de_rappel_de_check_out"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageLogo2"
                 app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageLogo2"
+                app:layout_constraintTop_toBottomOf="@+id/imageLogo2"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textAllerVersChambreDispo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/mada_semibold"
-                android:text="Aller vers les chambres disponibles"
+                android:text="@string/aller_vers_les_chambres_disponibles"
                 android:textAllCaps="false"
 
                 android:textColor="#246ABD"

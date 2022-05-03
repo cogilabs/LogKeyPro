@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chambre.AllerVersChambreActivity">
+
+
+    <ImageView
+        android:id="@+id/imageRectangle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="990dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="0dp"
+        android:layout_height="164dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log__key_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="290dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="-10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
+
+        <TextView
+            android:id="@+id/textLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:fontFamily="@font/mada"
+            android:text="@string/log"
+            android:textColor="#D1B78F"
+            android:textSize="34sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textKeyPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mada"
+            android:text="@string/key_pro"
+            android:textSize="34sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/rectangleArrivees"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
+        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/textArrivees"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mada_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/arriv_es_du_jour"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleArrivees"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleArrivees"
+        app:layout_constraintStart_toStartOf="@+id/rectangleArrivees"
+        app:layout_constraintTop_toTopOf="@+id/rectangleArrivees"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/rectangleDeparts"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleArrivees"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/textDeparts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mada_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/d_parts_du_jour"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleDeparts"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleDeparts"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleDeparts"
+        app:layout_constraintTop_toTopOf="@+id/rectangleDeparts"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/rectangleChambres"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleDeparts"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/textChambres"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mada_bold"
+        android:gravity="center_vertical"
+        android:text="@string/chambres"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleChambres"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleChambres"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleChambres"
+        app:layout_constraintTop_toTopOf="@+id/rectangleChambres"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/rectangleCommandes"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/imageRectangle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleChambres"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/textCommandes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mada_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/commandes"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleCommandes"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleCommandes"
+        app:layout_constraintTop_toTopOf="@+id/rectangleCommandes"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/rectangleRechercheClient"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleCommandes"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleCommandes"
+        app:layout_constraintTop_toBottomOf="@+id/rectangleCommandes"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <TextView
+        android:id="@+id/textRechercheClient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/mada_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/recherche_client"
+        android:textAlignment="center"
+        android:textColor="#585858"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangleRechercheClient"
+        app:layout_constraintEnd_toEndOf="@+id/rectangleRechercheClient"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectangleRechercheClient"
+        app:layout_constraintTop_toTopOf="@+id/rectangleRechercheClient"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
