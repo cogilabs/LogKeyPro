@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import fr.logkey.logkeypro.R
+import fr.logkey.logkeypro.ui.login.EmailPasswordActivity
 
 class DepartsActivity : AppCompatActivity() {
 
@@ -14,11 +18,14 @@ class DepartsActivity : AppCompatActivity() {
     lateinit var clickCommandes : TextView
     lateinit var clickRechercheClient : TextView
     lateinit var clickAccueil : ImageView
+    lateinit var deconnexionButton : TextView
+    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_departs)
+        auth = Firebase.auth
 
         clickArriveesDuJour = findViewById(R.id.textArrivees)
         val arriveesIntent = Intent(this, ArriveesActivity::class.java)
@@ -49,5 +56,16 @@ class DepartsActivity : AppCompatActivity() {
         clickAccueil.setOnClickListener {
             startActivity(accueilIntent)
         }
+
+        deconnexionButton = findViewById(R.id.textLogOut)
+
+        deconnexionButton.setOnClickListener {
+
+            auth.signOut()
+            val logoutIntent = Intent(this, EmailPasswordActivity::class.java)
+            logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(logoutIntent)
+        }
+
     }
 }

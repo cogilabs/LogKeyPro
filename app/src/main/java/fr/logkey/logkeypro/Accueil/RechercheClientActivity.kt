@@ -6,8 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import fr.logkey.logkeypro.R
 import fr.logkey.logkeypro.RechercheClient.ResultatRechercheClientActivity
+import fr.logkey.logkeypro.ui.login.EmailPasswordActivity
 
 class RechercheClientActivity : AppCompatActivity() {
 
@@ -18,11 +22,13 @@ class RechercheClientActivity : AppCompatActivity() {
     lateinit var clickAccueil : ImageView
     lateinit var clickRecherche : Button
     lateinit var clickRechercheClient : TextView
+    lateinit var deconnexionButton : TextView
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recherche_client)
-
+        auth = Firebase.auth
 
         clickArriveesDuJour = findViewById(R.id.textArrivees)
         val arriveesIntent = Intent(this, ArriveesActivity::class.java)
@@ -65,5 +71,16 @@ class RechercheClientActivity : AppCompatActivity() {
         clickRecherche.setOnClickListener {
             startActivity(rechercheClientIntent)
         }
+
+        deconnexionButton = findViewById(R.id.textLogOut)
+
+        deconnexionButton.setOnClickListener {
+
+            auth.signOut()
+            val logoutIntent = Intent(this, EmailPasswordActivity::class.java)
+            logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(logoutIntent)
+        }
+
     }
 }

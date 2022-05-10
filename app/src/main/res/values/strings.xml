@@ -100,6 +100,8 @@
     <string name="adresse_mail">Adresse mail :</string>
     <string name="adresse">Adresse :</string>
     <string name="contacts">Contacts :</string>
+    <string name="log_out">Log Out</string>
+    <string name="d_connexion">Déconnexion</string>
 
 
 </resources>

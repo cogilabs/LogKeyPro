@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import fr.logkey.logkeypro.Accueil.*
 import fr.logkey.logkeypro.R
 import fr.logkey.logkeypro.Accueil.RechercheClientActivity
+import fr.logkey.logkeypro.ui.login.EmailPasswordActivity
 
 class ChambresDisponiblesActivity : AppCompatActivity() {
 
@@ -17,10 +21,13 @@ class ChambresDisponiblesActivity : AppCompatActivity() {
     lateinit var clickRechercheClient : TextView
     lateinit var clickAccueil : ImageView
     lateinit var clickChambres : TextView
+    lateinit var deconnexionButton : TextView
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chambres_disponibles)
+        auth = Firebase.auth
 
         clickArriveesDuJour = findViewById(R.id.textArrivees)
         val arriveesIntent = Intent(this, ArriveesActivity::class.java)
@@ -57,5 +64,15 @@ class ChambresDisponiblesActivity : AppCompatActivity() {
         clickChambres.setOnClickListener {
             startActivity(chambresIntent)
         }
+        deconnexionButton = findViewById(R.id.textLogOut)
+
+        deconnexionButton.setOnClickListener {
+
+            auth.signOut()
+            val logoutIntent = Intent(this, EmailPasswordActivity::class.java)
+            logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(logoutIntent)
+        }
+
     }
 }
