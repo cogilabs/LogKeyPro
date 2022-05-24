@@ -121,7 +121,8 @@ class ChambresActivity : AppCompatActivity() {
         buttonEnvoieNotif.setOnClickListener {
             val title = etTitle.text.toString()
             val message = etMessage.text.toString()
-            val recipientToken = etToken.text.toString()
+            //val recipientToken = etToken.text.toString()
+            val recipientToken = "dd3hj1wXRfuued8by4nq_-:APA91bEduALXdjZ0PlWQQ16ZpSQeGG8RTyJVz1jhanyUqRYYNjty0V-lq-JMKyhyJTIi1KL3hQD1bdpbAWjfUO1tpBT2LYRsOvafkDQAn281t0q9hm-dGjsdqsEAijMU6mWDebChCag9"
             if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
                 PushNotification(
                     NotificationData(title, message),

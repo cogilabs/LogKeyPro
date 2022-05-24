@@ -460,11 +460,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="76dp"
                 android:layout_marginTop="32dp"
-                android:hint="Enter Title"
                 android:ems="10"
+                android:hint="Enter Title"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:text="Name"
+                android:text="Rappel"
                 app:layout_constraintStart_toStartOf="@+id/imageLogo2"
                 app:layout_constraintTop_toBottomOf="@+id/imageLogo2" />
 
@@ -472,12 +472,12 @@
                 android:id="@+id/etMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Enter message"
                 android:layout_marginTop="12dp"
                 android:ems="10"
+                android:hint="Enter message"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:text="Name"
+                android:text="N'oubliez pas d'effectuer votre check-out avant 10h"
                 app:layout_constraintStart_toStartOf="@+id/etTitle"
                 app:layout_constraintTop_toBottomOf="@+id/etTitle" />
 
