@@ -1,18 +1,28 @@
 package fr.logkey.logkeypro.Accueil
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
+import fr.logkey.logkeypro.*
 import fr.logkey.logkeypro.Chambre.AllerVersChambreActivity
 import fr.logkey.logkeypro.Chambre.ChambresDisponiblesActivity
-import fr.logkey.logkeypro.R
 import fr.logkey.logkeypro.ui.login.EmailPasswordActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+const val TOPIC = "/topics/myTopic2"
 
 class ChambresActivity : AppCompatActivity() {
 
@@ -25,6 +35,10 @@ class ChambresActivity : AppCompatActivity() {
     lateinit var clickChambresDispo : TextView
     lateinit var deconnexionButton : TextView
     private lateinit var auth: FirebaseAuth
+    private lateinit var etToken: EditText
+    private lateinit var etMessage: EditText
+    private lateinit var etTitle: EditText
+    private lateinit var buttonEnvoieNotif: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,8 +94,54 @@ class ChambresActivity : AppCompatActivity() {
             val logoutIntent = Intent(this, EmailPasswordActivity::class.java)
             logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(logoutIntent)
+
         }
+        etTitle = findViewById(R.id.etTitle)
+        buttonEnvoieNotif = findViewById(R.id.buttonEnvoieNotif)
+        etMessage = findViewById(R.id.etMessage)
+        etToken = findViewById(R.id.etToken)
 
+        FirebaseService.sharedPref = getSharedPreferences("sharedPref", MODE_PRIVATE)
 
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(
+            OnCompleteListener { task ->
+
+                if (!task.isSuccessful) {
+                    Log.w("???", "Fetching FCM token failed", task.exception)
+                    return@OnCompleteListener
+                }
+                val token = task.result
+                FirebaseService.token = token.toString()
+                etToken.setText(token.toString())
+
+                Log.d("???", "token is $token")
+            })
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+
+        buttonEnvoieNotif.setOnClickListener {
+            val title = etTitle.text.toString()
+            val message = etMessage.text.toString()
+            val recipientToken = etToken.text.toString()
+            if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
+                PushNotification(
+                    NotificationData(title, message),
+                    recipientToken
+                ).also {
+                    sendNotification(it)
+                }
+            }
+        }
+    }
+    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val response = RetrofitInstance.api.postNotification(notification)
+            if(response.isSuccessful) {
+                //Log.d(TAG, "Response: ${Gson().toJson(response)}")
+            } else {
+                Log.e(TAG, response.errorBody().toString())
+            }
+        } catch(e: Exception) {
+            Log.e(TAG, e.toString())
+        }
     }
 }

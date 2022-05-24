@@ -426,14 +426,13 @@
                 android:id="@+id/buttonEnvoieNotif"
                 android:layout_width="531dp"
                 android:layout_height="51dp"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/mada_bold"
                 android:text="@string/envoyer_une_notification_de_rappel_de_check_out"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageLogo2"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="@+id/imageLogo2"
-                app:layout_constraintTop_toBottomOf="@+id/imageLogo2"
+                app:layout_constraintTop_toBottomOf="@+id/etToken"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -450,8 +449,49 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/buttonEnvoieNotif"
+                app:layout_constraintHorizontal_bias="0.452"
                 app:layout_constraintStart_toStartOf="@+id/buttonEnvoieNotif"
-                app:layout_constraintTop_toBottomOf="@+id/buttonEnvoieNotif" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonEnvoieNotif"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="32dp"
+                android:hint="Enter Title"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="Name"
+                app:layout_constraintStart_toStartOf="@+id/imageLogo2"
+                app:layout_constraintTop_toBottomOf="@+id/imageLogo2" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter message"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="Name"
+                app:layout_constraintStart_toStartOf="@+id/etTitle"
+                app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+            <EditText
+                android:id="@+id/etToken"
+                android:hint="Enter Token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:text="Name"
+                app:layout_constraintStart_toStartOf="@+id/etMessage"
+                app:layout_constraintTop_toBottomOf="@+id/etMessage" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
